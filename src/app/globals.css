@@ -26,6 +26,14 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+:root {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
 @layer base {
   ::selection {
     @apply bg-primary-600;
@@ -83,7 +91,6 @@ body {
   }
 
   nav a:after,
-  .category-item:after,
   .social-link:after {
     @apply hidden;
   }
@@ -140,25 +147,60 @@ body {
   .category-item {
     @apply relative;
     @apply p-10;
-    @apply bg-black;
-    @apply bg-opacity-80;
-    @apply bg-blend-multiply;
-    @apply bg-cover;
-    @apply bg-center;
-    @apply h-full;
+    @apply text-black;
     @apply w-full;
+    @apply h-full;
     @apply rounded-md;
   }
 
-  .category-item:hover {
-    @apply bg-opacity-90;
+  .category-item::before {
+    @apply absolute;
+    @apply inset-0;
+    @apply z-[1];
+    @apply bg-transparent;
+    @apply opacity-0;
+    @apply rounded-md;
+    @apply transition-all;
+    content: '';
   }
 
-  .category-item.category-servers {
+  .category-item::before {
+    background: linear-gradient(
+      var(--rotation),
+      transparent 60%,
+      #c0efd9 70%,
+      #0a9169 90%
+    );
+  }
+
+  .category-item:hover::before {
+    @apply opacity-100;
+  }
+
+  .category-item::after {
+    @apply absolute;
+    @apply inset-[1px];
+    @apply z-[1];
+    @apply bg-white;
+    @apply bg-opacity-80;
+    @apply bg-blend-overlay;
+    @apply bg-cover;
+    @apply bg-center;
+    @apply h-auto;
+    @apply w-auto;
+    @apply rounded-md;
+    content: '';
+  }
+
+  .category-item:hover::after {
+    @apply w-auto;
+  }
+
+  .category-item.category-servers::after {
     @apply bg-[url('/images/placeholder-blog.jpg')];
   }
 
-  .category-item.category-minecraft {
+  .category-item.category-minecraft::after {
     @apply bg-[url('/images/minecraft.jpg')];
   }
 

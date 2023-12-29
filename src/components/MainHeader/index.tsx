@@ -4,7 +4,7 @@ import ModalContainer, { ModalContent, ModalHeader } from '../Modal';
 import PrimaryButton from '../PrimaryButton';
 
 const Post = {
-  title: 'Vyzkoušejte naše herní servery!',
+  title: 'Vyzkoušej naše herní servery!',
   image: '/images/placeholder-blog.jpg',
 };
 
