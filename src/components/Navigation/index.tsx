@@ -63,7 +63,9 @@ const Navigation = () => {
           >
             Kontakt
           </Link>
-          <PrimaryButton className='py-3'>Přihlásit se</PrimaryButton>
+          <PrimaryButton className='action-button py-3'>
+            Přihlásit se
+          </PrimaryButton>
         </ul>
       </div>
     </nav>

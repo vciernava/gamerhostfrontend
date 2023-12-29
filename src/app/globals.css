@@ -72,6 +72,10 @@ body {
     @apply backdrop-blur-sm;
   }
 
+  nav.scrolled .action-button {
+    @apply py-2;
+  }
+
   nav a {
     @apply text-black;
     @apply relative;
