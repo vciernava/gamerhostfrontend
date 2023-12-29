@@ -82,8 +82,14 @@ body {
     @apply block;
   }
 
-  nav a:after {
+  nav a:after,
+  .category-item:after,
+  .social-link:after {
     @apply hidden;
+  }
+
+  .social-link {
+    @apply p-2 hover:text-white hover:bg-primary-700 rounded-full;
   }
 
   .nav-links > .link {
@@ -146,10 +152,6 @@ body {
 
   .category-item:hover {
     @apply bg-opacity-90;
-  }
-
-  .category-item:after {
-    @apply hidden;
   }
 
   .category-item.category-servers {

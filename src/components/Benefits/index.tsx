@@ -51,7 +51,7 @@ const Benefits = () => {
 
 const BenefitsItemContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <div className='flex flex-row flex-nowrap items-center gap-5 bg-primary-100 cursor-pointer hover:scale-110 transition-transform rounded-md p-4'>
+    <div className='flex flex-row flex-nowrap items-center gap-5 bg-gray-50 cursor-pointer hover:scale-110 transition-transform rounded-md p-4'>
       {children}
     </div>
   );
