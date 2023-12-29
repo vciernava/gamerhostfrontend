@@ -35,8 +35,8 @@ const ModalContainer = ({
   };
 
   const closeModal = () => {
-    const modalRef = useRef<HTMLDivElement>(null);
-    modalRef.current?.classList.add('animate-fadeOut');
+    const modal = modalRef.current;
+    modal?.classList.add('animate-fadeOut');
     setTimeout(() => {
       setModalOpen(false);
       setBodyOverflow('');
