@@ -8,11 +8,26 @@ import PrimaryButton from '../PrimaryButton';
 const Navigation = () => {
   const pathname = usePathname();
 
+  // Add on scroll event
+  if (typeof window !== 'undefined') {
+    window.onscroll = () => {
+      if (window.pageYOffset > 0) {
+        document.querySelector('nav')?.classList.add('scrolled');
+      } else {
+        document.querySelector('nav')?.classList.remove('scrolled');
+      }
+    };
+  }
+
   return (
-    <nav className='fixed top-0 w-full z-10'>
+    <nav className='fixed top-0 w-full z-40 transition-colors'>
       <div className='container py-4 flex flex-row items-center justify-between'>
         <Link href='/'>
-          <img src='/logo-classic-new.svg' alt='logo' className='h-10' />
+          <img
+            src='/logo-classic-new.svg'
+            alt='logo'
+            className='h-10 hover:opacity-80 transition-opacity'
+          />
         </Link>
         <ul className='nav-links flex flex-row items-center gap-10'>
           <Link href='/' className={`link ${pathname === '/' ? 'active' : ''}`}>

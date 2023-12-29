@@ -31,13 +31,18 @@ body {
     @apply bg-primary-600;
     @apply text-white;
   }
+  section {
+    @apply relative;
+    @apply w-full;
+    @apply mt-6;
+    @apply mb-6;
+  }
 
   a {
     @apply text-primary-700;
     @apply relative;
     @apply inline-block;
     @apply transition-all;
-    @apply duration-300;
     @apply ease-in-out;
     @apply transform;
     @apply origin-left;
@@ -50,7 +55,6 @@ body {
     @apply h-[1px];
     @apply bg-primary-700;
     @apply transition-all;
-    @apply duration-300;
     @apply ease-in-out;
     @apply transform;
     @apply origin-left;
@@ -63,11 +67,17 @@ body {
     @apply origin-right;
   }
 
+  nav.scrolled {
+    @apply bg-white/80;
+    @apply backdrop-blur-sm;
+  }
+
   nav a {
     @apply text-black;
     @apply relative;
     @apply block;
   }
+
   nav a:after {
     @apply hidden;
   }
@@ -77,7 +87,6 @@ body {
     @apply relative;
     @apply inline-block;
     @apply transition-all;
-    @apply duration-300;
     @apply ease-in-out;
     @apply transform;
     @apply origin-left;
@@ -90,7 +99,6 @@ body {
     @apply h-[1px];
     @apply bg-black;
     @apply transition-all;
-    @apply duration-300;
     @apply ease-in-out;
     @apply transform;
     @apply origin-left;
@@ -117,6 +125,35 @@ body {
     @apply w-0;
     @apply transform;
     @apply origin-left;
+  }
+
+  .category-item {
+    @apply relative;
+    @apply p-10;
+    @apply bg-black;
+    @apply bg-opacity-80;
+    @apply bg-blend-multiply;
+    @apply bg-cover;
+    @apply bg-center;
+    @apply h-full;
+    @apply w-full;
+    @apply rounded-md;
+  }
+
+  .category-item:hover {
+    @apply bg-opacity-90;
+  }
+
+  .category-item:after {
+    @apply hidden;
+  }
+
+  .category-item.category-servers {
+    @apply bg-[url('/images/placeholder-blog.jpg')];
+  }
+
+  .category-item.category-minecraft {
+    @apply bg-[url('/images/minecraft.jpg')];
   }
 
   .heroImage {

@@ -1,4 +1,5 @@
 import Benefits from '@/components/Benefits';
+import Categories from '@/components/Categories';
 import MainHeader from '@/components/MainHeader';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <MainHeader />
       <Benefits />
+      <Categories />
     </>
   );
 }
