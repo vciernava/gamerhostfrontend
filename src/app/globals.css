@@ -32,8 +32,8 @@ body {
     @apply text-white;
   }
 
-  main > a {
-    @apply text-primary-600;
+  a {
+    @apply text-primary-700;
     @apply relative;
     @apply inline-block;
     @apply transition-all;
@@ -43,12 +43,12 @@ body {
     @apply origin-left;
   }
 
-  main > a:after {
+  a:after {
     @apply absolute;
     @apply block;
     @apply w-full;
     @apply h-[1px];
-    @apply bg-primary-600;
+    @apply bg-primary-700;
     @apply transition-all;
     @apply duration-300;
     @apply ease-in-out;
@@ -57,10 +57,19 @@ body {
     content: '';
   }
 
-  main > a:hover:after {
+  a:hover:after {
     @apply w-0;
     @apply transform;
     @apply origin-right;
+  }
+
+  nav a {
+    @apply text-black;
+    @apply relative;
+    @apply block;
+  }
+  nav a:after {
+    @apply hidden;
   }
 
   .nav-links > .link {

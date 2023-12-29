@@ -4,11 +4,13 @@ const PrimaryButton = ({
   children,
   className,
   as = 'button',
+  href,
   onClick,
 }: {
   children: ReactNode;
   className?: string;
   as?: 'button' | 'link';
+  href?: string;
   onClick?: () => void;
 }) => {
   if (as === 'button') {
@@ -24,6 +26,7 @@ const PrimaryButton = ({
     return (
       <a
         className={`bg-primary-700 text-white py-4 px-14 rounded-md hover:bg-primary-600 transition-all ${className}`}
+        href={href}
         onClick={onClick}
       >
         {children}
