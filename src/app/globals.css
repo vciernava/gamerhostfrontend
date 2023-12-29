@@ -32,7 +32,7 @@ body {
     @apply text-white;
   }
 
-  a {
+  main > a {
     @apply text-primary-600;
     @apply relative;
     @apply inline-block;
@@ -43,7 +43,7 @@ body {
     @apply origin-left;
   }
 
-  a:after {
+  main > a:after {
     @apply absolute;
     @apply block;
     @apply w-full;
@@ -57,10 +57,57 @@ body {
     content: '';
   }
 
-  a::hover:after {
+  main > a:hover:after {
     @apply w-0;
     @apply transform;
     @apply origin-right;
+  }
+
+  .nav-links > .link {
+    @apply text-black;
+    @apply relative;
+    @apply inline-block;
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply transform;
+    @apply origin-left;
+  }
+
+  .nav-links > .link:after {
+    @apply absolute;
+    @apply block;
+    @apply w-0;
+    @apply h-[1px];
+    @apply bg-black;
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply transform;
+    @apply origin-left;
+    content: '';
+  }
+
+  .nav-links > .link:hover:after {
+    @apply w-full;
+    @apply transform;
+    @apply origin-right;
+  }
+
+  .nav-links > .link.active {
+    @apply font-bold;
+  }
+
+  .nav-links > .link.active:after {
+    @apply w-full;
+    @apply transform;
+    @apply origin-right;
+  }
+
+  .nav-links > .link.active:hover:after {
+    @apply w-0;
+    @apply transform;
+    @apply origin-left;
   }
 
   .heroImage {

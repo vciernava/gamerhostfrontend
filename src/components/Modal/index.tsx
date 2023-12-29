@@ -40,7 +40,7 @@ const ModalContainer = ({
 
       {modalOpen && (
         <>
-          <div className='modal-container absolute top-0 left-0 w-screen h-screen overflow-hidden bg-black/80'>
+          <div className='modal-container absolute top-0 left-0 w-screen h-screen overflow-hidden bg-black/80 z-50'>
             <div className='modal-content absolute px-12 py-8 rounded-md bg-white top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
               <div className='absolute z-10 bg-white p-4 rounded-full -left-6 top-1/2 -translate-y-1/2'>
                 <ModalIcon color={modalColor} />

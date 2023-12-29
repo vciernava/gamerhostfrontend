@@ -3,10 +3,15 @@
 import ModalContainer, { ModalContent, ModalHeader } from '../Modal';
 import PrimaryButton from '../PrimaryButton';
 
+const Post = {
+  title: 'Vyzkoušejte naše herní servery!',
+  image: '/images/placeholder-blog.jpg',
+};
+
 const MainHeader = () => {
   return (
     <>
-      <ModalContainer autoOpen={false} displayButton={false}>
+      <ModalContainer autoOpen={true} displayButton={false}>
         <ModalHeader>
           Vážení návštěvníci, Dovolte mi, prosím, upozornit, že tato stránka
           není oficiálním hostingem GamerHost.pro!
@@ -98,10 +103,7 @@ const MainHeader = () => {
                     <clipPath id='clip_2'>
                       <use xlinkHref='#path_1' />
                     </clipPath>
-                    <image
-                      xlinkHref='/images/placeholder-blog.jpg'
-                      id='img_1'
-                    />
+                    <image xlinkHref={Post.image} id='img_1' />
                     <pattern
                       patternUnits='objectBoundingBox'
                       x='-0.008560181%'
@@ -145,7 +147,7 @@ const MainHeader = () => {
                 </svg>
               </div>
               <PrimaryButton className='absolute bottom-[20%] left-1/2 -translate-x-1/2 w-2/4 py-4 text-center text-white bg-primary-700/60 hover:bg-primary-700 hover:scale-110 backdrop-blur-sm rounded-md'>
-                Vyzkoušej naše herní servery!
+                {Post.title}
               </PrimaryButton>
             </div>
           </div>
