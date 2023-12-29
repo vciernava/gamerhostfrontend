@@ -167,7 +167,7 @@ body {
   .category-item::before {
     background: linear-gradient(
       var(--rotation),
-      transparent 60%,
+      transparent 80%,
       #c0efd9 70%,
       #0a9169 90%
     );
