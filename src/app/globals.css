@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,46 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@layer base {
+  ::selection {
+    @apply bg-primary-600;
+    @apply text-white;
+  }
+
+  a {
+    @apply text-primary-600;
+    @apply relative;
+    @apply inline-block;
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply transform;
+    @apply origin-left;
+  }
+
+  a:after {
+    @apply absolute;
+    @apply block;
+    @apply w-full;
+    @apply h-[1px];
+    @apply bg-primary-600;
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply transform;
+    @apply origin-left;
+    content: '';
+  }
+
+  a::hover:after {
+    @apply w-0;
+    @apply transform;
+    @apply origin-right;
+  }
+
+  .heroImage {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7/12 h-auto;
+  }
 }
