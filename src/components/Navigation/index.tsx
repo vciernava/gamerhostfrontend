@@ -4,23 +4,33 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import PrimaryButton from '../PrimaryButton';
 
-// Sticky scroll-hide navigation bar
 const Navigation = () => {
   const pathname = usePathname();
 
-  // Add on scroll event
   if (typeof window !== 'undefined') {
+    let prevScrollpos = window.pageYOffset;
+
     window.onscroll = () => {
+      let currentScrollPos = window.pageYOffset;
+      const nav = document.querySelector('nav');
       if (window.pageYOffset > 0) {
-        document.querySelector('nav')?.classList.add('scrolled');
+        nav?.classList.add('scrolled');
+
+        if (prevScrollpos > currentScrollPos) {
+          nav?.style.setProperty('transform', 'translateY(0)');
+        } else {
+          nav?.style.setProperty('transform', 'translateY(-100%)');
+        }
       } else {
-        document.querySelector('nav')?.classList.remove('scrolled');
+        nav?.classList.remove('scrolled');
       }
+
+      prevScrollpos = currentScrollPos;
     };
   }
 
   return (
-    <nav className='fixed top-0 w-full z-40 transition-colors'>
+    <nav className='fixed top-0 w-full z-40 overflow-hidden transition-all'>
       <div className='container py-4 flex flex-row items-center justify-between'>
         <Link href='/'>
           <img

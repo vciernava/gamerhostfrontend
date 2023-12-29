@@ -43,6 +43,8 @@ const config: Config = {
       fadeIn: 'fadeIn 300ms ease-in-out',
       SlideOut: 'SlideOut 300ms ease-in-out',
       SlideIn: 'SlideIn 300ms ease-in-out',
+      SlideDown: 'SlideDown 300ms ease-in-out',
+      SlideUp: 'SlideUp 300ms ease-in-out',
       floatY: 'floatY 3s ease-in-out infinite',
       floatX: 'floatX 3s ease-in-out infinite',
     },
@@ -62,6 +64,14 @@ const config: Config = {
       SlideIn: {
         '0%': { transform: 'translateX(-100%)' },
         '100%': { transform: 'translateX(0)' },
+      },
+      SlideDown: {
+        '0%': { transform: 'translateY(-100%)' },
+        '100%': { transform: 'translateY(0)' },
+      },
+      SlideUp: {
+        '0%': { transform: 'translateY(0)' },
+        '100%': { transform: 'translateY(-100%)' },
       },
       floatY: {
         '0%': { transform: 'translateY(0px)' },
