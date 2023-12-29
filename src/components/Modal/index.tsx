@@ -27,7 +27,7 @@ const ModalContainer = ({
 }) => {
   const [modalOpen, setModalOpen] = useState(autoOpen);
   const [bodyOverflow, setBodyOverflow] = useState('');
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const openModal = () => {
     setModalOpen(true);
@@ -35,16 +35,16 @@ const ModalContainer = ({
   };
 
   const closeModal = () => {
-    const modal = modalRef.current;
-    modal?.classList.add('animate-fadeOut');
+    const modalRef = useRef<HTMLDivElement>(null);
+    modalRef.current?.classList.add('animate-fadeOut');
     setTimeout(() => {
       setModalOpen(false);
       setBodyOverflow('');
     }, 250);
   };
 
-  const handleModalClick = (e: MouseEventHandler<HTMLDivElement>) => {
-    if (e.target === modalRef.current) {
+  const handleModalClick: MouseEventHandler<HTMLDivElement> = (event) => {
+    if (event.target === modalRef.current) {
       closeModal();
     }
   };
