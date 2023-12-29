@@ -34,6 +34,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   ::selection {
     @apply bg-primary-600;
