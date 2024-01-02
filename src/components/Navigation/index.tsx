@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import PrimaryButton from "../PrimaryButton";
 import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { ReactNode, useState } from "react";
+import { NavLinks } from "@/Data/Navigation";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -49,43 +50,14 @@ const Navigation = () => {
           />
         </Link>
         <ul className="nav-links hidden flex-row items-center gap-10 xl:flex">
-          <Link href="/" className={`link ${pathname === "/" ? "active" : ""}`}>
-            Domů
-          </Link>
-          <Link
-            href="/minecraft"
-            className={`link ${pathname === "/minecraft" ? "active" : ""}`}
-          >
-            Minecraft
-          </Link>
-          {/* <DropdownLink
-            buttonTitle="Minecraft"
-            DropdownContent={<>Dropdown</>}
-          /> */}
-          <Link
-            href="/vps"
-            className={`link ${pathname === "/vps" ? "active" : ""}`}
-          >
-            VPS
-          </Link>
-          <Link
-            href="/ds"
-            className={`link ${pathname === "/ds" ? "active" : ""}`}
-          >
-            DS
-          </Link>
-          <Link
-            href="/wiki"
-            className={`link ${pathname === "/wiki" ? "active" : ""}`}
-          >
-            Návody
-          </Link>
-          <Link
-            href="/kontakt"
-            className={`link ${pathname === "/kontakt" ? "active" : ""}`}
-          >
-            Kontakt
-          </Link>
+          {NavLinks.map((link) => (
+            <Link
+              href={link.url}
+              className={`link ${pathname === link.url ? "active" : ""}`}
+            >
+              {link.title}
+            </Link>
+          ))}
           <PrimaryButton className="action-button py-3">
             Přihlásit se
           </PrimaryButton>
@@ -98,42 +70,14 @@ const Navigation = () => {
         <div className="mobile-menu fixed left-0 top-0 z-50 hidden h-full w-full bg-white">
           <div className="container flex h-full flex-col items-center justify-center">
             <ul className="nav-links flex flex-col items-center justify-center gap-10">
-              <Link
-                href="/"
-                className={`link ${pathname === "/" ? "active" : ""}`}
-              >
-                Domů
-              </Link>
-              <Link
-                href="/minecraft"
-                className={`link ${pathname === "/minecraft" ? "active" : ""}`}
-              >
-                Minecraft
-              </Link>
-              <Link
-                href="/vps"
-                className={`link ${pathname === "/vps" ? "active" : ""}`}
-              >
-                VPS
-              </Link>
-              <Link
-                href="/ds"
-                className={`link ${pathname === "/ds" ? "active" : ""}`}
-              >
-                DS
-              </Link>
-              <Link
-                href="/wiki"
-                className={`link ${pathname === "/wiki" ? "active" : ""}`}
-              >
-                Návody
-              </Link>
-              <Link
-                href="/kontakt"
-                className={`link ${pathname === "/kontakt" ? "active" : ""}`}
-              >
-                Kontakt
-              </Link>
+              {NavLinks.map((link) => (
+                <Link
+                  href={link.url}
+                  className={`link ${pathname === link.url ? "active" : ""}`}
+                >
+                  {link.title}
+                </Link>
+              ))}
               <PrimaryButton className="action-button py-3">
                 Přihlásit se
               </PrimaryButton>
