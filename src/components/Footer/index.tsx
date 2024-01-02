@@ -73,9 +73,7 @@ const Footer = () => {
                 placeholder="E-mail"
               />
               <PrimaryButton
-                onClick={() =>
-                  toast("Tato funkce ještě nefunguje!", { icon: "🚧" })
-                }
+                onClick={() => toast.error("Tato funkce ještě nefunguje!")}
               >
                 Přihlásit se
               </PrimaryButton>

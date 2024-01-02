@@ -25,7 +25,7 @@ const PrimaryButton = ({
   } else {
     return (
       <a
-        className={`rounded-md bg-primary-700 px-14 py-4 text-white transition-all hover:bg-primary-600 ${className}`}
+        className={`rounded-md bg-primary-700 px-14 py-4 text-white transition-all hover:bg-primary-600 ${className} after:hidden`}
         href={href}
         onClick={onClick}
       >
