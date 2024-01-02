@@ -9,6 +9,13 @@ const Post = {
 };
 
 const MainHeader = () => {
+  const handleShowProductsClick = () => {
+    const element = document.getElementById("mc-products");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <ModalContainer autoOpen={true} displayButton={false}>
@@ -41,7 +48,9 @@ const MainHeader = () => {
                 uloženy v jednom z nejlepších datacenter v Praze. Tak co přidáš
                 se k nám?
               </p>
-              <PrimaryButton>Zobrazit nabídku</PrimaryButton>
+              <PrimaryButton onClick={handleShowProductsClick}>
+                Zobrazit nabídku
+              </PrimaryButton>
             </div>
             <div className="relative hidden h-full xl:block xl:w-[65%]">
               <div
