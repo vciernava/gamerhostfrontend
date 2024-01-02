@@ -63,7 +63,7 @@ const ProductSliderWrapper = ({
       >
         {children}
       </Swiper>
-      <div className="bottom:0 absolute left-1/2 flex w-full -translate-x-1/2 flex-row flex-nowrap items-center justify-between px-32 2xl:top-1/2 2xl:-translate-y-1/2">
+      <div className="bottom:0 flex w-full flex-row flex-nowrap items-center justify-between px-32 2xl:absolute 2xl:left-1/2 2xl:top-1/2 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
         <div
           ref={navigationPrevRef}
           className="cursor-pointer rounded-md p-2 text-primary-700 transition-colors hover:bg-primary-50"
