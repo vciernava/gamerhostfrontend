@@ -3,6 +3,7 @@ import {
   IconCpu,
   IconCloudBolt,
   IconCloud,
+  IconUsers,
 } from "@tabler/icons-react";
 
 export const productsMCStandard: Products = [
@@ -13,6 +14,11 @@ export const productsMCStandard: Products = [
       {
         title: "RAM",
         value: "4GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,
@@ -47,6 +53,11 @@ export const productsMCStandard: Products = [
         value: "8GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 5 3600",
@@ -77,6 +88,11 @@ export const productsMCStandard: Products = [
       {
         title: "RAM",
         value: "16GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,
@@ -111,6 +127,11 @@ export const productsMCStandard: Products = [
         value: "32GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 5 3600",
@@ -143,6 +164,11 @@ export const productsMCStandard: Products = [
         value: "64GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 5 3600",
@@ -173,6 +199,11 @@ export const productsMCStandard: Products = [
       {
         title: "RAM",
         value: "128GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,
@@ -210,6 +241,11 @@ export const productsMCPerformance: Products = [
         value: "4GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 9 5900X",
@@ -240,6 +276,11 @@ export const productsMCPerformance: Products = [
       {
         title: "RAM",
         value: "8GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,
@@ -274,6 +315,11 @@ export const productsMCPerformance: Products = [
         value: "16GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 9 5900X",
@@ -304,6 +350,11 @@ export const productsMCPerformance: Products = [
       {
         title: "RAM",
         value: "32GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,
@@ -338,6 +389,11 @@ export const productsMCPerformance: Products = [
         value: "64GB",
       },
       {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
+      },
+      {
         icon: IconCloudComputing,
         title: "CPU",
         value: "AMD Ryzen 9 5900X",
@@ -368,6 +424,11 @@ export const productsMCPerformance: Products = [
       {
         title: "RAM",
         value: "128GB",
+      },
+      {
+        icon: IconUsers,
+        title: "Sloty",
+        value: "Neomezujeme",
       },
       {
         icon: IconCloudComputing,

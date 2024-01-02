@@ -152,7 +152,7 @@ export default function Home() {
         <div className="mx-auto max-w-screen-2xl rounded-md bg-primary-700">
           <div className="container max-w-6xl px-10 py-10 text-white">
             <h1 className="mb-4 text-center text-4xl font-bold">
-              Proč si vybrat nás?
+              Proč si vybrat právě nás?
             </h1>
             <p>
               Od roku 2018 jsme váš spolehlivý partner pro herní a VPS servery s

@@ -23,55 +23,57 @@ const ProductSliderWrapper = ({
   const navigationNextRef = useRef(null);
 
   return (
-    <Swiper
-      modules={[Navigation]}
-      slidesPerView={4}
-      spaceBetween={80}
-      navigation={{
-        prevEl: navigationPrevRef.current,
-        nextEl: navigationNextRef.current,
-      }}
-      onBeforeInit={(swiper) => {
-        const navigation = swiper.params.navigation as NavigationOptions;
+    <>
+      <Swiper
+        modules={[Navigation]}
+        slidesPerView={4}
+        spaceBetween={80}
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current,
+        }}
+        onBeforeInit={(swiper) => {
+          const navigation = swiper.params.navigation as NavigationOptions;
 
-        navigation.prevEl = navigationPrevRef.current;
-        navigation.nextEl = navigationNextRef.current;
-      }}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 16,
-        },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 24,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 32,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 80,
-        },
-      }}
-      loop
-      draggable
-      className={className}
-      {...props}
-    >
-      {children}
-      <div className="swiper__navigation flex flex-nowrap items-center justify-center gap-16">
+          navigation.prevEl = navigationPrevRef.current;
+          navigation.nextEl = navigationNextRef.current;
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 80,
+          },
+        }}
+        loop
+        draggable
+        className={className}
+        {...props}
+      >
+        {children}
+      </Swiper>
+      <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-row flex-nowrap items-center justify-between px-32">
         <IconArrowNarrowLeft
           ref={navigationPrevRef}
-          className="h-12 w-12 cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
+          className=" h-8 w-8  cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
         />
         <IconArrowNarrowRight
           ref={navigationNextRef}
-          className="h-12 w-12 cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
+          className="h-8 w-8 cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
         />
       </div>
-    </Swiper>
+    </>
   );
 };
 
