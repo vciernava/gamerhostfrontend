@@ -29,8 +29,6 @@ body {
 :root {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.5;
   box-sizing: border-box;
 }
 
@@ -39,6 +37,13 @@ html {
 }
 
 @layer base {
+  body {
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    @apply text-xs md:text-sm lg:text-base;
+  }
+
   ::selection {
     @apply bg-primary-600;
     @apply text-white;

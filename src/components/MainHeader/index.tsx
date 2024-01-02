@@ -32,7 +32,7 @@ const MainHeader = () => {
       <header>
         <div className="container">
           <div className="flex h-[700px] items-center overflow-hidden">
-            <div className="relative w-[35%]">
+            <div className="relative xl:w-[35%]">
               <h1 className="text-pretty text-6xl font-bold text-black">
                 Herní hosting co si na nic nehraje
               </h1>
@@ -43,7 +43,7 @@ const MainHeader = () => {
               </p>
               <PrimaryButton>Zobrazit nabídku</PrimaryButton>
             </div>
-            <div className="relative h-full w-[65%]">
+            <div className="relative hidden h-full xl:block xl:w-[65%]">
               <div
                 className="absolute right-[35%] top-[10%] z-10 rotate-[100deg]"
                 id="blocks1"

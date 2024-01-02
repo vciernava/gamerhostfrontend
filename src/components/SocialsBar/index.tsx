@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const SocialsBar = () => {
   return (
-    <div className="fixed right-10 top-1/2 z-10 -translate-y-1/2 rounded-full border border-gray-100 p-2">
+    <div className="fixed right-10 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-gray-100 p-2 xl:block">
       <div className="flex flex-col gap-2">
         <Link
           href="https://www.facebook.com/gamerhost.pro"
