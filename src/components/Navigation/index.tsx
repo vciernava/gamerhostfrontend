@@ -50,10 +50,11 @@ const Navigation = () => {
           />
         </Link>
         <ul className="nav-links hidden flex-row items-center gap-10 xl:flex">
-          {NavLinks.map((link) => (
+          {NavLinks.map((link, index) => (
             <Link
               href={link.url}
               className={`link ${pathname === link.url ? "active" : ""}`}
+              key={index}
             >
               {link.title}
             </Link>
@@ -70,10 +71,11 @@ const Navigation = () => {
         <div className="mobile-menu fixed left-0 top-0 z-50 hidden h-full w-full bg-white">
           <div className="container flex h-full flex-col items-center justify-center">
             <ul className="nav-links flex flex-col items-center justify-center gap-10">
-              {NavLinks.map((link) => (
+              {NavLinks.map((link, index) => (
                 <Link
                   href={link.url}
                   className={`link ${pathname === link.url ? "active" : ""}`}
+                  key={index}
                 >
                   {link.title}
                 </Link>
