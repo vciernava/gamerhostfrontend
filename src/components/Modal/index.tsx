@@ -90,12 +90,12 @@ const ModalContainer = ({
 
       {modalOpen && (
         <div
-          className="modal-container fixed left-0 top-0 z-50 h-screen w-full animate-fadeIn overflow-hidden bg-black/80"
+          className=" modal-container fixed left-0 top-0 z-50 h-screen w-full animate-fadeIn overflow-hidden bg-black/80"
           ref={modalRef}
           onClick={handleModalClick}
         >
-          <div className="modal-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white px-12 py-8">
-            <div className="absolute -left-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-4">
+          <div className="modal-content absolute left-1/2 top-1/2 w-10/12 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white px-4 py-8 lg:px-12">
+            <div className="absolute -top-6 left-1/2 z-10 -translate-x-1/2 rounded-full bg-white p-4">
               <ModalIcon color={modalColor} />
             </div>
             <button className="absolute right-0 top-0 m-4" onClick={closeModal}>
@@ -123,11 +123,17 @@ const ModalContainer = ({
 };
 
 export const ModalHeader = ({ children }: { children: ReactNode }) => {
-  return <div className="mb-2 text-xl font-bold text-black">{children}</div>;
+  return (
+    <div className="mb-2 text-base font-bold text-black md:text-xl">
+      {children}
+    </div>
+  );
 };
 
 export const ModalContent = ({ children }: { children: ReactNode }) => {
-  return <div className="text-base text-secondary-600">{children}</div>;
+  return (
+    <div className="text-sm text-secondary-600 md:text-base">{children}</div>
+  );
 };
 
 export default ModalContainer;
