@@ -1,22 +1,22 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 const PrimaryButton = ({
   children,
   className,
-  as = 'button',
+  as = "button",
   href,
   onClick,
 }: {
   children: ReactNode;
   className?: string;
-  as?: 'button' | 'link';
+  as?: "button" | "link";
   href?: string;
   onClick?: () => void;
 }) => {
-  if (as === 'button') {
+  if (as === "button") {
     return (
       <button
-        className={`bg-primary-700 text-white py-4 px-14 rounded-md hover:bg-primary-600 transition-all ${className}`}
+        className={`rounded-md bg-primary-700 px-14 py-4 text-white transition-all hover:bg-primary-600 ${className}`}
         onClick={onClick}
       >
         {children}
@@ -25,7 +25,7 @@ const PrimaryButton = ({
   } else {
     return (
       <a
-        className={`bg-primary-700 text-white py-4 px-14 rounded-md hover:bg-primary-600 transition-all ${className}`}
+        className={`rounded-md bg-primary-700 px-14 py-4 text-white transition-all hover:bg-primary-600 ${className}`}
         href={href}
         onClick={onClick}
       >

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, {
   ComponentType,
   MouseEventHandler,
@@ -6,15 +6,15 @@ import React, {
   useEffect,
   useRef,
   useState,
-} from 'react';
-import PrimaryButton from '../PrimaryButton';
-import { IconAlertHexagon, TablerIconsProps } from '@tabler/icons-react';
+} from "react";
+import PrimaryButton from "../PrimaryButton";
+import { IconAlertHexagon, TablerIconsProps } from "@tabler/icons-react";
 
 const ModalContainer = ({
   autoOpen = false,
   displayButton = true,
-  buttonText = 'Zobrazit modal',
-  modalColor = '#F43F5E',
+  buttonText = "Zobrazit modal",
+  modalColor = "#F43F5E",
   modalIcon: ModalIcon = IconAlertHexagon,
   children,
 }: {
@@ -26,20 +26,20 @@ const ModalContainer = ({
   children: ReactNode;
 }) => {
   const [modalOpen, setModalOpen] = useState(autoOpen);
-  const [bodyOverflow, setBodyOverflow] = useState('');
+  const [bodyOverflow, setBodyOverflow] = useState("");
   const modalRef = useRef<HTMLDivElement>(null);
 
   const openModal = () => {
     setModalOpen(true);
-    setBodyOverflow('hidden');
+    setBodyOverflow("hidden");
   };
 
   const closeModal = () => {
     const modal = modalRef.current;
-    modal?.classList.add('animate-fadeOut');
+    modal?.classList.add("animate-fadeOut");
     setTimeout(() => {
       setModalOpen(false);
-      setBodyOverflow('');
+      setBodyOverflow("");
     }, 250);
   };
 
@@ -52,28 +52,28 @@ const ModalContainer = ({
   useEffect(() => {
     if (modalOpen) {
       const handleEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
+        if (e.key === "Escape") {
           closeModal();
         }
       };
 
-      document.addEventListener('keydown', handleEscape);
+      document.addEventListener("keydown", handleEscape);
 
       return () => {
-        document.removeEventListener('keydown', handleEscape);
+        document.removeEventListener("keydown", handleEscape);
       };
     }
   }, [modalOpen]);
 
   useEffect(() => {
     if (modalOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [modalOpen]);
 
@@ -85,27 +85,27 @@ const ModalContainer = ({
 
       {modalOpen && (
         <div
-          className='modal-container absolute top-0 left-0 w-full h-screen bg-black/80 z-50 overflow-hidden'
+          className="modal-container absolute left-0 top-0 z-50 h-screen w-full overflow-hidden bg-black/80"
           ref={modalRef}
           onClick={handleModalClick}
         >
-          <div className='modal-content absolute px-12 py-8 rounded-md bg-white top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
-            <div className='absolute z-10 bg-white p-4 rounded-full -left-6 top-1/2 -translate-y-1/2'>
+          <div className="modal-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white px-12 py-8">
+            <div className="absolute -left-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-4">
               <ModalIcon color={modalColor} />
             </div>
-            <button className='absolute top-0 right-0 m-4' onClick={closeModal}>
+            <button className="absolute right-0 top-0 m-4" onClick={closeModal}>
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6 text-rose-500'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-rose-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M6 18L18 6M6 6l12 12'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
@@ -118,11 +118,11 @@ const ModalContainer = ({
 };
 
 export const ModalHeader = ({ children }: { children: ReactNode }) => {
-  return <div className='text-xl font-bold text-black mb-2'>{children}</div>;
+  return <div className="mb-2 text-xl font-bold text-black">{children}</div>;
 };
 
 export const ModalContent = ({ children }: { children: ReactNode }) => {
-  return <div className='text-base text-secondary-600'>{children}</div>;
+  return <div className="text-base text-secondary-600">{children}</div>;
 };
 
 export default ModalContainer;
