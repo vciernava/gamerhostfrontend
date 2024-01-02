@@ -147,7 +147,7 @@ const ProductSlider = ({ products }: { products: Products }) => {
               <ul className="flex flex-col gap-2">
                 {product.features.map((feature, index) => {
                   return feature.title === "RAM" ? null : (
-                    <li key={index} className="flex items-center gap-2">
+                    <li key={index} className="flex gap-2">
                       {feature.icon && (
                         <feature.icon
                           className={`h-5 w-5 ${
