@@ -46,8 +46,8 @@ html {
   section {
     @apply relative;
     @apply w-full;
-    @apply mt-6;
-    @apply mb-6;
+    @apply pt-6;
+    @apply pb-6;
   }
 
   a {
@@ -148,7 +148,7 @@ html {
     @apply origin-left;
   }
 
-  .category-item {
+  .category__item {
     @apply relative;
     @apply p-10;
     @apply text-black;
@@ -157,7 +157,8 @@ html {
     @apply rounded-md;
   }
 
-  .category-item::before {
+  .category__item::before,
+  .product__item::before {
     @apply absolute;
     @apply inset-0;
     @apply z-[1];
@@ -168,25 +169,36 @@ html {
     content: '';
   }
 
-  .category-item::before {
+  .product__item.featured::before {
     background: linear-gradient(
       var(--rotation),
       transparent 80%,
-      #c0efd9 70%,
+      #f2f9ff 70%,
+      #0092e6 90%
+    );
+  }
+
+  .category__item::before,
+  .product__item::before {
+    background: linear-gradient(
+      var(--rotation),
+      transparent 80%,
+      #f2fdf8 70%,
       #0a9169 90%
     );
   }
 
-  .category-item:hover::before {
+  .category__item:hover::before,
+  .product__item:hover::before {
     @apply opacity-100;
   }
 
-  .category-item::after {
+  .category__item::after {
     @apply absolute;
     @apply inset-[1px];
     @apply z-[1];
     @apply bg-white;
-    @apply bg-opacity-80;
+    @apply bg-opacity-90;
     @apply bg-blend-overlay;
     @apply bg-cover;
     @apply bg-center;
@@ -196,16 +208,27 @@ html {
     content: '';
   }
 
-  .category-item:hover::after {
+  .category__item:hover::after {
     @apply w-auto;
   }
 
-  .category-item.category-servers::after {
+  .category__item.category-servers::after {
     @apply bg-[url('/images/placeholder-blog.jpg')];
   }
 
-  .category-item.category-minecraft::after {
+  .category__item.category-minecraft::after {
     @apply bg-[url('/images/minecraft.jpg')];
+  }
+
+  .product__item::after {
+    @apply absolute;
+    @apply inset-[1px];
+    @apply z-[1];
+    @apply bg-white;
+    @apply h-auto;
+    @apply w-auto;
+    @apply rounded-md;
+    content: '';
   }
 
   .heroImage {

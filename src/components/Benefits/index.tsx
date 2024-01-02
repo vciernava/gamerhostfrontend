@@ -30,7 +30,7 @@ const BenefitsList = [
 const Benefits = () => {
   return (
     <section>
-      <div className='container py-10 border-t border-b border-secondary-100'>
+      <div className='container py-10 border-t border-b border-gray-100'>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10'>
           {BenefitsList.map((item) => (
             <BenefitsItemContainer key={item.title}>

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const Categories = () => {
   useEffect(() => {
-    const categoryItems = document.querySelectorAll('.category-item');
+    const categoryItems = document.querySelectorAll('.category__item');
     categoryItems.forEach((item) => {
       (item as HTMLElement).style.setProperty('--rotation', `0deg`);
     });
@@ -29,8 +29,8 @@ const Categories = () => {
       <div className='container'>
         <div className='grid grid-cols-3 grid-rows-2 gap-5'>
           <Link
-            className='category-item category-servers h-[200px]'
-            href={''}
+            className='category__item category-servers bg-gray-200 h-[200px]'
+            href='/vps'
             onMouseMove={handleMouseEnter}
           >
             <h1 className='relative top-1/2 -translate-y-1/2 text-5xl font-bold z-[2]'>
@@ -41,8 +41,8 @@ const Categories = () => {
             </h1>
           </Link>
           <Link
-            className='category-item category-servers h-[200px]'
-            href={''}
+            className='category__item category-servers bg-gray-200 h-[200px]'
+            href='/vps'
             onMouseMove={handleMouseEnter}
           >
             <h1 className='relative top-1/2 -translate-y-1/2 text-5xl font-bold z-[2]'>
@@ -53,8 +53,8 @@ const Categories = () => {
             </h1>
           </Link>
           <Link
-            className='category-item category-servers h-[200px] col-span-2 row-start-2'
-            href={''}
+            className='category__item category-servers bg-gray-200 h-[200px] col-span-2 row-start-2'
+            href='/ds'
             onMouseMove={handleMouseEnter}
           >
             <h1 className='relative top-1/2 -translate-y-1/2 text-6xl font-bold z-[2]'>
@@ -62,8 +62,8 @@ const Categories = () => {
             </h1>
           </Link>
           <Link
-            className='category-item category-minecraft row-span-2'
-            href={''}
+            className='category__item category-minecraft bg-gray-200 row-span-2'
+            href='/minecraft'
             onMouseMove={handleMouseEnter}
           >
             <h1 className='relative top-1/2 -translate-y-1/2 text-7xl font-bold z-[2]'>
