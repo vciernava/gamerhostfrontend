@@ -53,7 +53,7 @@ const ProductSliderWrapper = ({
           },
           1536: {
             slidesPerView: 4,
-            spaceBetween: 80,
+            spaceBetween: 40,
           },
         }}
         loop
