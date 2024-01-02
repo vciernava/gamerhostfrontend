@@ -64,14 +64,19 @@ const ProductSliderWrapper = ({
         {children}
       </Swiper>
       <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-row flex-nowrap items-center justify-between px-32">
-        <IconArrowNarrowLeft
+        <div
           ref={navigationPrevRef}
-          className=" h-8 w-8  cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
-        />
-        <IconArrowNarrowRight
+          className="cursor-pointer rounded-md p-2 text-primary-700 transition-colors hover:bg-primary-50"
+        >
+          <IconArrowNarrowLeft className="h-8 w-8" />
+        </div>
+
+        <div
           ref={navigationNextRef}
-          className="h-8 w-8 cursor-pointer text-secondary-500 transition-colors hover:text-primary-700"
-        />
+          className="cursor-pointer rounded-md p-2 text-primary-700 transition-colors hover:bg-primary-50"
+        >
+          <IconArrowNarrowRight className="h-8 w-8" />
+        </div>
       </div>
     </>
   );

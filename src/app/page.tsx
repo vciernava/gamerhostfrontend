@@ -3,7 +3,6 @@ import { productsVPSPerformance, productsVPSStandard } from "@/Data/VPS";
 import { productsMCPerformance, productsMCStandard } from "@/Data/Minecaft";
 import MainHeader from "@/components/MainHeader";
 import ProductSlider from "@/components/ProductSlider";
-import SocialsBar from "@/components/SocialsBar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BenefitsList } from "@/Data/Benefits";
@@ -46,7 +45,6 @@ export default function Home() {
 
   return (
     <>
-      <SocialsBar />
       <MainHeader />
       <section id="benefits">
         <div className="container border-b border-t border-gray-100 py-10">

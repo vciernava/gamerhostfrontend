@@ -14,6 +14,7 @@ const ModalContainer = ({
   autoOpen = false,
   displayButton = true,
   buttonText = "Zobrazit modal",
+  buttonClass = "",
   modalColor = "#F43F5E",
   modalIcon: ModalIcon = IconAlertHexagon,
   children,
@@ -21,6 +22,7 @@ const ModalContainer = ({
   autoOpen?: boolean;
   displayButton?: boolean;
   buttonText?: string;
+  buttonClass?: string;
   modalColor?: string;
   modalIcon?: ComponentType<TablerIconsProps>;
   children: ReactNode;
@@ -36,6 +38,7 @@ const ModalContainer = ({
 
   const closeModal = () => {
     const modal = modalRef.current;
+    modal?.classList.remove("animate-fadeIn");
     modal?.classList.add("animate-fadeOut");
     setTimeout(() => {
       setModalOpen(false);
@@ -80,12 +83,14 @@ const ModalContainer = ({
   return (
     <div>
       {displayButton && (
-        <PrimaryButton onClick={openModal}>{buttonText}</PrimaryButton>
+        <PrimaryButton className={buttonClass} onClick={openModal}>
+          {buttonText}
+        </PrimaryButton>
       )}
 
       {modalOpen && (
         <div
-          className="modal-container fixed left-0 top-0 z-50 h-screen w-full overflow-hidden bg-black/80"
+          className="modal-container fixed left-0 top-0 z-50 h-screen w-full animate-fadeIn overflow-hidden bg-black/80"
           ref={modalRef}
           onClick={handleModalClick}
         >
