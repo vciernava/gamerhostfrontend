@@ -68,13 +68,13 @@ export default function Home() {
       </section>
       <section id="products">
         <div className="container">
-          <div className="grid grid-cols-3 grid-rows-2 gap-5">
+          <div className="grid grid-cols-1 gap-5 xl:grid-cols-3 xl:grid-rows-2">
             <Link
               className="category__item category-servers h-[200px] bg-gray-200"
               href="/vps"
               onMouseMove={handleMouseEnter}
             >
-              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-5xl font-bold">
+              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-3xl font-bold xl:text-5xl">
                 <small className="block text-2xl font-bold">
                   Virtuální servery
                 </small>
@@ -86,7 +86,7 @@ export default function Home() {
               href="/vps"
               onMouseMove={handleMouseEnter}
             >
-              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-5xl font-bold">
+              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-3xl font-bold xl:text-5xl">
                 <small className="block text-2xl font-bold">
                   Virtuální servery
                 </small>
@@ -94,20 +94,20 @@ export default function Home() {
               </h1>
             </Link>
             <Link
-              className="category__item category-servers col-span-2 row-start-2 h-[200px] bg-gray-200"
+              className="category__item category-servers h-[200px] bg-gray-200 xl:col-span-2 xl:row-start-2"
               href="/ds"
               onMouseMove={handleMouseEnter}
             >
-              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-6xl font-bold">
+              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-3xl font-bold xl:text-6xl">
                 Dedikované servery
               </h1>
             </Link>
             <Link
-              className="category__item category-minecraft row-span-2 bg-gray-200"
+              className="category__item category-minecraft h-[200px] bg-gray-200 xl:row-span-2 xl:h-auto"
               href="/minecraft"
               onMouseMove={handleMouseEnter}
             >
-              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-7xl font-bold">
+              <h1 className="relative top-1/2 z-[2] -translate-y-1/2 text-3xl font-bold xl:text-7xl">
                 Minecraft servery
               </h1>
             </Link>
