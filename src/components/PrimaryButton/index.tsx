@@ -4,23 +4,19 @@ const PrimaryButton = ({
   children,
   className,
   as = 'button',
-  color = 'bg-primary-700',
-  hoverColor = 'bg-primary-600',
   href,
   onClick,
 }: {
   children: ReactNode;
   className?: string;
   as?: 'button' | 'link';
-  color?: string;
-  hoverColor?: string;
   href?: string;
   onClick?: () => void;
 }) => {
   if (as === 'button') {
     return (
       <button
-        className={`${color} text-white py-4 px-14 rounded-md hover:${hoverColor} transition-all ${className}`}
+        className={`bg-primary-700 text-white py-4 px-14 rounded-md hover:bg-primary-600 transition-all ${className}`}
         onClick={onClick}
       >
         {children}
@@ -29,7 +25,7 @@ const PrimaryButton = ({
   } else {
     return (
       <a
-        className={`${color} text-white py-4 px-14 rounded-md hover:${hoverColor} transition-all ${className}`}
+        className={`bg-primary-700 text-white py-4 px-14 rounded-md hover:bg-primary-600 transition-all ${className}`}
         href={href}
         onClick={onClick}
       >

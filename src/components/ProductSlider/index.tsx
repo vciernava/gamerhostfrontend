@@ -149,9 +149,9 @@ const ProductSlider = ({ products }: { products: Products }) => {
                 <h4>{product.price} Kč /měsíc</h4>
               </div>
               <PrimaryButton
-                color={product.featured ? 'bg-blue-600' : 'bg-primary-700'}
-                hoverColor={product.featured ? 'bg-blue-500' : 'bg-primary-600'}
-                className='product__button'
+                className={`product__button ${
+                  product.featured ? 'bg-blue-600 hover:bg-blue-500' : ''
+                }`}
               >
                 Objednat
               </PrimaryButton>
