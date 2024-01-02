@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
-import ModalContainer, { ModalContent, ModalHeader } from "../Modal";
+import PrimaryButton from "../PrimaryButton";
+import toast from "react-hot-toast";
 
 const Footer = () => {
   return (
@@ -70,13 +72,13 @@ const Footer = () => {
                 className="w-2/4 rounded-md border border-gray-300 px-3 py-2 transition-colors hover:border-primary-700 focus:border-primary-700 focus:outline-none"
                 placeholder="E-mail"
               />
-              <ModalContainer buttonText="Přihlásit se">
-                <ModalHeader>Odběr novinek</ModalHeader>
-                <ModalContent>
-                  Tato funkce není zatím dostupná, ale pracujeme na jejim
-                  dokončení.
-                </ModalContent>
-              </ModalContainer>
+              <PrimaryButton
+                onClick={() =>
+                  toast("Tato funkce ještě nefunguje!", { icon: "🚧" })
+                }
+              >
+                Přihlásit se
+              </PrimaryButton>
             </div>
           </div>
         </div>

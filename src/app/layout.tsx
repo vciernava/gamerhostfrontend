@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );
