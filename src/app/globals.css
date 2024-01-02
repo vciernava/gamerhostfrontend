@@ -237,8 +237,8 @@ html {
   }
 
   .product__item.featured .product__button {
-    @apply bg-blue-500;
-    @apply hover:bg-blue-400;
+    @apply bg-alternative-500;
+    @apply hover:bg-alternative-400;
   }
 
   .heroImage {

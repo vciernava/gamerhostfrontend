@@ -115,7 +115,7 @@ const ProductSlider = ({ products }: { products: Products }) => {
           >
             <div className="product__header relative z-[2] flex items-center gap-4">
               {product.featured && (
-                <div className="absolute -right-7 -top-5 rounded-md bg-blue-600 p-1 text-white">
+                <div className="bg-alternative-600 absolute -right-7 -top-5 rounded-md p-1 text-white">
                   <IconFlame className="h-6 w-6" />
                 </div>
               )}
@@ -126,7 +126,9 @@ const ProductSlider = ({ products }: { products: Products }) => {
                 <h3>{product.title}</h3>
                 <small
                   className={`${
-                    product.featured ? "text-blue-600" : "text-primary-700"
+                    product.featured
+                      ? "text-alternative-600"
+                      : "text-primary-700"
                   }`}
                 >
                   {
@@ -152,7 +154,7 @@ const ProductSlider = ({ products }: { products: Products }) => {
                         <feature.icon
                           className={`h-5 w-5 ${
                             product.featured
-                              ? "text-blue-600"
+                              ? "text-alternative-600"
                               : "text-primary-700"
                           }`}
                         />
@@ -167,7 +169,7 @@ const ProductSlider = ({ products }: { products: Products }) => {
             </div>
             <div
               className={`product__footer relative z-[2] flex flex-col items-center gap-4 rounded-md p-4 ${
-                product.featured ? "bg-blue-900" : "bg-primary-900"
+                product.featured ? "bg-alternative-900" : "bg-primary-900"
               }`}
             >
               <div className="product__price text-xl font-bold text-white">

@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="cs">
       <body className={font.className}>
         <Navigation />
-        <main>{children}</main>
+        <main className="animate-fadeIn">{children}</main>
         <Footer />
         <Toaster position="bottom-right" />
       </body>
