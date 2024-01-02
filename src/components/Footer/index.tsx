@@ -83,7 +83,8 @@ const Footer = () => {
         <div className="mt-6 grid grid-cols-5 border-t border-gray-200 pt-6">
           <div className="col-span-2">
             <p className="text-sm leading-relaxed text-secondary-500">
-              © 2020 Gamerhost s.r.o. Všechna práva vyhrazena.
+              © 2023 Design a grafické práce zpracoval rotzzik . Všechna práva
+              vyhrazena.
             </p>
           </div>
           <div className="col-span-3">
