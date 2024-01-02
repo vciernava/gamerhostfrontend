@@ -1,15 +1,12 @@
-"use client";
-import { useEffect, useState } from "react";
-import ProductSlider from "../ProductSlider";
 import {
-  IconCloud,
-  IconCloudBolt,
   IconCloudComputing,
-  IconCloudDataConnection,
   IconCpu,
+  IconCloudBolt,
+  IconCloud,
+  IconCloudDataConnection,
 } from "@tabler/icons-react";
 
-const productsStandard: Products = [
+export const productsVPSStandard: Products = [
   {
     title: "Starter",
     price: 199,
@@ -234,7 +231,7 @@ const productsStandard: Products = [
   },
 ];
 
-const productsPerformance: Products = [
+export const productsVPSPerformance: Products = [
   {
     title: "Starter",
     price: 309,
@@ -458,53 +455,3 @@ const productsPerformance: Products = [
     featured: false,
   },
 ];
-
-const VPSProducts = () => {
-  const [products, setProducts] = useState<Products>(productsStandard);
-  const [active, setActive] = useState<"standard" | "performance">("standard");
-
-  useEffect(() => {
-    if (active === "standard") {
-      setProducts(productsStandard);
-    } else {
-      setProducts(productsPerformance);
-    }
-  }, [active]);
-
-  return (
-    <section>
-      <div className="container">
-        <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
-          <h1 className="text-3xl font-bold">
-            Nabídka naších Virtuálních serverů
-          </h1>
-          <div className="flex gap-4">
-            <button
-              className={`${
-                active === "standard"
-                  ? "bg-primary-700 text-white"
-                  : "bg-white text-primary-700 hover:bg-primary-50"
-              } rounded-md px-4 py-2 transition-colors`}
-              onClick={() => setActive("standard")}
-            >
-              Standard
-            </button>
-            <button
-              className={`${
-                active === "performance"
-                  ? "bg-primary-700 text-white"
-                  : "bg-white text-primary-700 hover:bg-primary-50"
-              } rounded-md px-4 py-2 transition-colors`}
-              onClick={() => setActive("performance")}
-            >
-              Performance
-            </button>
-          </div>
-        </div>
-        <ProductSlider products={products} />
-      </div>
-    </section>
-  );
-};
-
-export default VPSProducts;
