@@ -48,7 +48,7 @@ export default function Home() {
     <>
       <SocialsBar />
       <MainHeader />
-      <section>
+      <section id="benefits">
         <div className="container border-b border-t border-gray-100 py-10">
           <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
             {BenefitsList.map((item) => (
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="products">
         <div className="container">
           <div className="grid grid-cols-3 grid-rows-2 gap-5">
             <Link
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="mc-products">
         <div className="container">
           <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
             <h1 className="text-3xl font-bold">
@@ -148,22 +148,24 @@ export default function Home() {
           <ProductSlider products={MCproducts} />
         </div>
       </section>
-      <section>
-        <div className="container max-w-6xl rounded-md bg-primary-700 px-10 py-10 text-white">
-          <h1 className="mb-4 text-center text-4xl font-bold">
-            Proč si vybrat nás?
-          </h1>
-          <p>
-            Od roku 2018 jsme váš spolehlivý partner pro herní a VPS servery s
-            důrazem na kvalitu a přátelský přístup. Nabízíme servery v České
-            republice, denně přidáváme novinky a vylepšení. Naše stroje jsou
-            spojeny s páteřní sítí Peering.cz, zajišťující kvalitu a nízkou
-            odezvu. Jsme tu s úsměvem, abychom splnili vaše požadavky a
-            zajistili, že si plně užijete herní a online zážitky.
-          </p>
+      <section id="why-us">
+        <div className="mx-auto max-w-screen-2xl rounded-md bg-primary-700">
+          <div className="container max-w-6xl px-10 py-10 text-white">
+            <h1 className="mb-4 text-center text-4xl font-bold">
+              Proč si vybrat nás?
+            </h1>
+            <p>
+              Od roku 2018 jsme váš spolehlivý partner pro herní a VPS servery s
+              důrazem na kvalitu a přátelský přístup. Nabízíme servery v České
+              republice, denně přidáváme novinky a vylepšení. Naše stroje jsou
+              spojeny s páteřní sítí Peering.cz, zajišťující kvalitu a nízkou
+              odezvu. Jsme tu s úsměvem, abychom splnili vaše požadavky a
+              zajistili, že si plně užijete herní a online zážitky.
+            </p>
+          </div>
         </div>
       </section>
-      <section>
+      <section id="vps-products">
         <div className="container">
           <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
             <h1 className="text-3xl font-bold">
