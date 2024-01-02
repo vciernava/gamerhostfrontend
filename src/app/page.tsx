@@ -1,8 +1,9 @@
-import Benefits from '@/components/Benefits';
-import Categories from '@/components/Categories';
-import MainHeader from '@/components/MainHeader';
-import MinecraftProducts from '@/components/MinecraftProducts';
-import SocialsBar from '@/components/SocialsBar';
+import Benefits from "@/components/Benefits";
+import Categories from "@/components/Categories";
+import MainHeader from "@/components/MainHeader";
+import MinecraftProducts from "@/components/MinecraftProducts";
+import SocialsBar from "@/components/SocialsBar";
+import VPSProducts from "@/components/VPSProducts";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Benefits />
       <Categories />
       <MinecraftProducts />
+      <VPSProducts />
     </>
   );
 }

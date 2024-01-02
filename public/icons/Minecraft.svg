@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Minecraft" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #0a9169;
+        stroke-miterlimit: 10;
+        stroke-width: 80px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="1215.24 1018.61 1215.24 481.39 750 212.79 284.76 481.39 284.76 1018.61 750 1287.21 1215.24 1018.61"/>
+  <polyline class="cls-1" points="284.76 481.39 750 750 750 1287.21"/>
+  <polyline class="cls-1" points="531.01 339.22 996.25 607.83 996.25 1145.04"/>
+</svg>

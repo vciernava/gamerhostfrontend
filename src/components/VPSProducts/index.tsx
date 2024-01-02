@@ -5,13 +5,14 @@ import {
   IconCloud,
   IconCloudBolt,
   IconCloudComputing,
+  IconCloudDataConnection,
   IconCpu,
 } from "@tabler/icons-react";
 
 const productsStandard: Products = [
   {
     title: "Starter",
-    price: 169,
+    price: 199,
     features: [
       {
         title: "RAM",
@@ -20,12 +21,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "1x",
       },
       {
         icon: IconCloudBolt,
@@ -35,14 +36,19 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "10GB",
+        value: "30GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
-    title: "Advanced",
+    title: "Standard",
     price: 299,
     features: [
       {
@@ -52,12 +58,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "2x",
       },
       {
         icon: IconCloudBolt,
@@ -67,11 +73,16 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "20GB",
+        value: "60GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft Featured.svg",
-    featured: true,
+    image: "../icons/VPS.svg",
+    featured: false,
   },
   {
     title: "Premium",
@@ -84,12 +95,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "4x",
       },
       {
         icon: IconCloudBolt,
@@ -99,11 +110,16 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "30GB",
+        value: "120GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
-    featured: false,
+    image: "../icons/VPS Featured.svg",
+    featured: true,
   },
   {
     title: "Extreme",
@@ -116,12 +132,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "8x",
       },
       {
         icon: IconCloudBolt,
@@ -131,15 +147,20 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "40GB",
+        value: "240GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
     title: "Professional",
-    price: 1000,
+    price: 699,
     features: [
       {
         title: "RAM",
@@ -148,12 +169,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "16x",
       },
       {
         icon: IconCloudBolt,
@@ -163,15 +184,20 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "60GB",
+        value: "480GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
     title: "Enterprise",
-    price: 2000,
+    price: 899,
     features: [
       {
         title: "RAM",
@@ -180,12 +206,12 @@ const productsStandard: Products = [
       {
         icon: IconCloudComputing,
         title: "CPU",
-        value: "AMD Ryzen 5 3600",
+        value: "Intel Xeon",
       },
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "32x",
       },
       {
         icon: IconCloudBolt,
@@ -195,10 +221,15 @@ const productsStandard: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "80GB",
+        value: "960GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
 ];
@@ -220,7 +251,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "1x",
       },
       {
         icon: IconCloudBolt,
@@ -230,15 +261,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "10GB",
+        value: "30GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
-    title: "Advanced",
-    price: 499,
+    title: "Standard",
+    price: 409,
     features: [
       {
         title: "RAM",
@@ -252,7 +288,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "2x",
       },
       {
         icon: IconCloudBolt,
@@ -262,15 +298,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "20GB",
+        value: "60GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft Featured.svg",
-    featured: true,
+    image: "../icons/VPS.svg",
+    featured: false,
   },
   {
     title: "Premium",
-    price: 699,
+    price: 509,
     features: [
       {
         title: "RAM",
@@ -284,7 +325,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "4x",
       },
       {
         icon: IconCloudBolt,
@@ -294,15 +335,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "30GB",
+        value: "120GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
     title: "Extreme",
-    price: 899,
+    price: 609,
     features: [
       {
         title: "RAM",
@@ -316,7 +362,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "8x",
       },
       {
         icon: IconCloudBolt,
@@ -326,15 +372,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "40GB",
+        value: "240GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
-    featured: false,
+    image: "../icons/VPS Featured.svg",
+    featured: true,
   },
   {
     title: "Professional",
-    price: 1500,
+    price: 809,
     features: [
       {
         title: "RAM",
@@ -348,7 +399,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "16x",
       },
       {
         icon: IconCloudBolt,
@@ -358,15 +409,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "60GB",
+        value: "480GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
   {
     title: "Enterprise",
-    price: 3000,
+    price: 1009,
     features: [
       {
         title: "RAM",
@@ -380,7 +436,7 @@ const productsPerformance: Products = [
       {
         icon: IconCpu,
         title: "vCPU",
-        value: "Neomezujeme",
+        value: "32x",
       },
       {
         icon: IconCloudBolt,
@@ -390,15 +446,20 @@ const productsPerformance: Products = [
       {
         icon: IconCloud,
         title: "SSD",
-        value: "80GB",
+        value: "960GB",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Provoz",
+        value: "až 1.8Tbps",
       },
     ],
-    image: "../icons/Minecraft.svg",
+    image: "../icons/VPS.svg",
     featured: false,
   },
 ];
 
-const MinecraftProducts = () => {
+const VPSProducts = () => {
   const [products, setProducts] = useState<Products>(productsStandard);
   const [active, setActive] = useState<"standard" | "performance">("standard");
 
@@ -415,7 +476,7 @@ const MinecraftProducts = () => {
       <div className="container">
         <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
           <h1 className="text-3xl font-bold">
-            Nabídka naších Minecraft serverů
+            Nabídka naších Virtuálních serverů
           </h1>
           <div className="flex gap-4">
             <button
@@ -446,4 +507,4 @@ const MinecraftProducts = () => {
   );
 };
 
-export default MinecraftProducts;
+export default VPSProducts;

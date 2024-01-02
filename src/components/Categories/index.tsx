@@ -49,7 +49,7 @@ const Categories = () => {
               <small className="block text-2xl font-bold">
                 Virtuální servery
               </small>
-              BUDGET
+              STANDARD
             </h1>
           </Link>
           <Link

@@ -37,6 +37,24 @@ const ProductSliderWrapper = ({
         navigation.prevEl = navigationPrevRef.current;
         navigation.nextEl = navigationNextRef.current;
       }}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 80,
+        },
+      }}
       loop
       draggable
       className={className}
