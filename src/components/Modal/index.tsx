@@ -85,7 +85,7 @@ const ModalContainer = ({
 
       {modalOpen && (
         <div
-          className="modal-container absolute left-0 top-0 z-50 h-screen w-full overflow-hidden bg-black/80"
+          className="modal-container fixed left-0 top-0 z-50 h-screen w-full overflow-hidden bg-black/80"
           ref={modalRef}
           onClick={handleModalClick}
         >
