@@ -117,14 +117,14 @@ const Page = () => {
               <FaqContent>
                 Rádi bychom vám pomohli vybrat ten nejlepší server pro vaše
                 potřeby. Pokud plánujete menší herní zážitky s přáteli,
-                doporučujeme balíček "Standard" s procesorem AMD Ryzen 5 3600
-                pro optimální výkon. Pro větší a náročnější projekty je tu
-                balíček "Performance" s procesorem AMD Ryzen 9 5900X, který
-                zvládne i ty nejnáročnější Minecraft servery. A nezapomeňte na
-                dostatek RAM – pro menší projekty 4GB, pro větší a výkonnější
-                servery alespoň 8GB. Pokud si nejste jisti výběrem, můžete se
-                obrátit na naši podporu na emailu support@gamerhost.pro nebo
-                přes livechat.
+                doporučujeme balíček &quot;Standard&quot; s procesorem AMD Ryzen
+                5 3600 pro optimální výkon. Pro větší a náročnější projekty je
+                tu balíček &quot;Performance&quot; s procesorem AMD Ryzen 9
+                5900X, který zvládne i ty nejnáročnější Minecraft servery. A
+                nezapomeňte na dostatek RAM – pro menší projekty 4GB, pro větší
+                a výkonnější servery alespoň 8GB. Pokud si nejste jisti výběrem,
+                můžete se obrátit na naši podporu na emailu
+                support@gamerhost.pro nebo přes livechat.
               </FaqContent>
             </FaqItem>
             <FaqItem>
