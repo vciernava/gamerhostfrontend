@@ -3,43 +3,33 @@ import { FaqWrapper, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq";
 import PrimaryButton from "@/components/PrimaryButton";
 import ProductGrid from "@/components/ProductGrid";
 import SmallHeader from "@/components/Smallheader";
-import { productsMCPerformance, productsMCStandard } from "@/Data/Minecaft";
+import { productsDS } from "@/Data/DS";
 import { IconCheck, IconCpu } from "@tabler/icons-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Page = () => {
-  const [products, setProducts] = useState<Products>(productsMCStandard);
-  const [active, setActive] = useState<"standard" | "performance">("standard");
-
-  useEffect(() => {
-    if (active === "standard") {
-      setProducts(productsMCStandard);
-    } else {
-      setProducts(productsMCPerformance);
-    }
-  }, [active]);
+  const [products, setProducts] = useState<Products>(productsDS);
 
   return (
     <>
       <SmallHeader
-        title="Minecraft servery"
-        description="Bezlimitový zážitek pro tebe a tvoje kamarády, nebo komunitu."
+        title="Dedikované servery"
+        description="Posouvejte hranice vašich projektů s našimi dedikovanými servery."
       />
       <section id="standard">
         <div className="container grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="relative col-span-1">
             <div className="left-50 absolute top-0 flex gap-2 text-alternative-500">
-              <IconCpu className="h-6 w-6" /> AMD RYZEN 5 3600
+              <IconCpu className="h-6 w-6" /> INTEL XEON
             </div>
             <h1 className="mt-6 text-3xl font-bold leading-relaxed">
-              Minecraft server Standard
+              Virtuální server Standard
             </h1>
             <p className="text-lg leading-relaxed">
-              Minecraft Standard nabízí cenově dostupné servery s AMD Ryzen 5
-              3600 procesory pro optimální poměr cena/výkon. Ideální pro hraní s
-              kamarády a nenáročné projekty, zaručuje plynulý zážitek bez
-              kompromisů.
+              Nabízíme cenově dostupné servery s procesory Intel Xeon pro ty
+              méně náročnější projekty. Ideální pro servery s menším počtem
+              hráčů, zaručuje stabilitu a plynulý zážitek.
             </p>
             <ul className="mt-4">
               <li className="flex items-center gap-2">
@@ -52,7 +42,7 @@ const Page = () => {
               </li>
               <li className="flex items-center gap-2">
                 <IconCheck className="h-6 w-6 text-primary-700" /> Ideální pro
-                hraní s kamarády
+                menší projekty
               </li>
               <li className="flex items-center gap-2">
                 <IconCheck className="h-6 w-6 text-primary-700" /> Stabilita a
@@ -86,18 +76,17 @@ const Page = () => {
               <IconCpu className="h-6 w-6" /> AMD RYZEN 9 5900X
             </div>
             <h1 className="mt-6 text-3xl font-bold leading-relaxed">
-              Minecraft server Performance
+              Virtální server Performance
             </h1>
             <p className="text-lg leading-relaxed">
-              Chcete si dopřát hraní bez jediného záškubu? V naší nabídce
-              naleznete i servery s AMD Ryzen 9 5900X, které se postarají o
-              nepřetržitý výkon pro váš Minecraft server a vydrží cokoliv, co vy
-              potřebujete.
+              Nabízíme výkonné servery s AMD Ryzen 9 5900X procesory pro ty nej
+              náročnější projekty. Ideální pro servery s vysokým počtem hráčů,
+              zaručuje plynulý zážitek bez kompromisů.
             </p>
             <ul className="mt-4">
               <li className="flex items-center gap-2">
                 <IconCheck className="h-6 w-6 text-primary-700" /> Pro náročené
-                uživatele a hráče
+                projekty
               </li>
               <li className="flex items-center gap-2">
                 <IconCheck className="h-6 w-6 text-primary-700" /> Nejlepší
@@ -171,31 +160,7 @@ const Page = () => {
       <section id="products">
         <div className="container">
           <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
-            <h1 className="text-3xl font-bold">
-              Nabídka naších Minecraft serverů
-            </h1>
-            <div className="flex gap-4">
-              <button
-                className={`${
-                  active === "standard"
-                    ? "bg-primary-700 text-white"
-                    : "bg-white text-primary-700 hover:bg-primary-50"
-                } rounded-md px-4 py-2 transition-colors`}
-                onClick={() => setActive("standard")}
-              >
-                Standard
-              </button>
-              <button
-                className={`${
-                  active === "performance"
-                    ? "bg-primary-700 text-white"
-                    : "bg-white text-primary-700 hover:bg-primary-50"
-                } rounded-md px-4 py-2 transition-colors`}
-                onClick={() => setActive("performance")}
-              >
-                Performance
-              </button>
-            </div>
+            <h1 className="text-3xl font-bold">Dostupné dedikované servery</h1>
           </div>
           <ProductGrid products={products} />
         </div>
