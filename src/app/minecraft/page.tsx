@@ -116,7 +116,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section id="faq">
+      <section className="bg-gray-50" id="faq">
         <div className="container">
           <h1 className="text-center text-4xl font-bold">
             Máte nějaké otázky?
