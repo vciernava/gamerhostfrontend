@@ -10,6 +10,7 @@ import {
   IconFlame,
 } from "@tabler/icons-react";
 import PrimaryButton from "../PrimaryButton";
+import Image from "next/image";
 
 const ProductSliderWrapper = ({
   children,
@@ -115,12 +116,17 @@ const ProductSlider = ({ products }: { products: Products }) => {
           >
             <div className="product__header relative z-[2] flex items-center gap-4">
               {product.featured && (
-                <div className="bg-alternative-600 absolute -right-7 -top-5 rounded-md p-1 text-white">
+                <div className="absolute -right-7 -top-5 rounded-md bg-alternative-600 p-1 text-white">
                   <IconFlame className="h-6 w-6" />
                 </div>
               )}
-              <div className="product__image h-20 w-20">
-                <img src={product.image} alt={product.title} />
+              <div className="product__image">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  height={80}
+                  width={80}
+                />
               </div>
               <div className="product__title text-2xl font-bold">
                 <h3>{product.title}</h3>

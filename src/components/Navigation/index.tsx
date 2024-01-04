@@ -6,6 +6,7 @@ import PrimaryButton from "../PrimaryButton";
 import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { ReactNode, useState } from "react";
 import { NavLinks } from "@/Data/Navigation";
+import Image from "next/image";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -43,10 +44,12 @@ const Navigation = () => {
     <nav className="fixed top-0 z-40 w-full bg-white transition-all xl:bg-transparent">
       <div className="container flex flex-row items-center justify-between py-4">
         <Link href="/">
-          <img
+          <Image
             src="/logo-classic-new.svg"
             alt="logo"
-            className="h-10 transition-opacity hover:opacity-80"
+            className="transition-opacity hover:opacity-80"
+            height={60}
+            width={180}
           />
         </Link>
         <ul className="nav-links hidden flex-row items-center gap-10 xl:flex">

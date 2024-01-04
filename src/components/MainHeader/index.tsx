@@ -40,10 +40,10 @@ const MainHeader = () => {
         <div className="container">
           <div className="flex h-[700px] items-center overflow-hidden">
             <div className="relative xl:w-[35%]">
-              <h1 className="text-pretty text-6xl font-bold text-black">
+              <h1 className="text-blac leading-relaxedk text-pretty text-6xl font-bold">
                 Herní hosting co si na nic nehraje
               </h1>
-              <p className="mb-10 mt-4 text-pretty text-xl text-secondary-500">
+              <p className="mb-10 mt-4 text-pretty text-xl leading-relaxed text-secondary-500">
                 Jsme upřímný herní hosting sídlící v Česku, naše servery jsou
                 uloženy v jednom z nejlepších datacenter v Praze. Tak co přidáš
                 se k nám?

@@ -48,11 +48,12 @@ html {
     @apply bg-primary-600;
     @apply text-white;
   }
+
   section {
     @apply relative;
     @apply w-full;
-    @apply pt-6;
-    @apply pb-6;
+    @apply pt-8;
+    @apply pb-8;
   }
 
   a {
@@ -243,5 +244,25 @@ html {
 
   .heroImage {
     @apply absolute left-1/2 top-1/2 h-auto w-7/12 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .faq-wrapper .faq-trigger {
+    @apply mt-4 flex cursor-pointer items-center justify-between border-b border-secondary-100 px-8 py-4 text-lg font-bold leading-relaxed transition-colors;
+  }
+
+  .faq-wrapper .faq-trigger .faq-icon {
+    @apply h-6 w-6 text-secondary-500;
+  }
+
+  .faq-wrapper .faq-trigger.active .faq-icon {
+    @apply text-primary-700;
+  }
+
+  .faq-wrapper .faq-content {
+    @apply my-2 overflow-y-hidden px-8 leading-relaxed transition-[max-height];
+  }
+
+  .faq-wrapper:hover .faq-trigger:not(:hover):not(.active) {
+    @apply text-secondary-500;
   }
 }
