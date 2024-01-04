@@ -1,11 +1,25 @@
 "use client";
 import { FaqWrapper, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq";
 import PrimaryButton from "@/components/PrimaryButton";
+import ProductGrid from "@/components/ProductGrid";
 import SmallHeader from "@/components/Smallheader";
+import { productsMCPerformance, productsMCStandard } from "@/Data/Minecaft";
 import { IconCheck, IconCpu } from "@tabler/icons-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Page = () => {
+  const [products, setProducts] = useState<Products>(productsMCStandard);
+  const [active, setActive] = useState<"standard" | "performance">("standard");
+
+  useEffect(() => {
+    if (active === "standard") {
+      setProducts(productsMCStandard);
+    } else {
+      setProducts(productsMCPerformance);
+    }
+  }, [active]);
+
   return (
     <>
       <SmallHeader
@@ -13,7 +27,7 @@ const Page = () => {
         description="Bezlimitový zážitek pro tebe a tvoje kamarády, nebo komunitu."
       />
       <section id="standard">
-        <div className="container grid grid-cols-2">
+        <div className="container grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="relative col-span-1">
             <div className="left-50 absolute top-0 flex gap-2 text-alternative-500">
               <IconCpu className="h-6 w-6" /> AMD RYZEN 5 3600
@@ -58,7 +72,7 @@ const Page = () => {
         </div>
       </section>
       <section id="performance">
-        <div className="container grid grid-cols-2">
+        <div className="container grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="col-span-1 flex items-center justify-center">
             <Image
               src="/images/minecraft-performance.png"
@@ -152,6 +166,38 @@ const Page = () => {
               </FaqContent>
             </FaqItem>
           </FaqWrapper>
+        </div>
+      </section>
+      <section id="products">
+        <div className="container">
+          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
+            <h1 className="text-3xl font-bold">
+              Nabídka naších Minecraft serverů
+            </h1>
+            <div className="flex gap-4">
+              <button
+                className={`${
+                  active === "standard"
+                    ? "bg-primary-700 text-white"
+                    : "bg-white text-primary-700 hover:bg-primary-50"
+                } rounded-md px-4 py-2 transition-colors`}
+                onClick={() => setActive("standard")}
+              >
+                Standard
+              </button>
+              <button
+                className={`${
+                  active === "performance"
+                    ? "bg-primary-700 text-white"
+                    : "bg-white text-primary-700 hover:bg-primary-50"
+                } rounded-md px-4 py-2 transition-colors`}
+                onClick={() => setActive("performance")}
+              >
+                Performance
+              </button>
+            </div>
+          </div>
+          <ProductGrid products={products} />
         </div>
       </section>
     </>
