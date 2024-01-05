@@ -26,15 +26,15 @@ const Page = () => {
 
         if (productsDS.length > 0) {
           setTimeout(() => {
-            resolve(`Počet dostupných serverů: ${productsDS.length}`);
+            resolve("Servery byly úspěšně načteny.");
           }, 1000);
         } else {
           throw new Error();
         }
       }),
       {
-        loading: "Kontroluji dostupnost",
-        success: `Počet dostupných serverů: ${productsDS.length}`,
+        loading: "Kontroluji dostupné servery...",
+        success: `Servery byly úspěšně načteny.`,
         error: "Omlouváme se, ale žádné servery nejsou aktuálně k dispozici.",
       },
     );
