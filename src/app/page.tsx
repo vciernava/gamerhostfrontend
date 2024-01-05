@@ -165,7 +165,7 @@ export default function Home() {
       </section>
       <section id="vps-products">
         <div className="container">
-          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
+          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between gap-4">
             <h1 className="text-3xl font-bold">
               Nabídka naších Virtuálních serverů
             </h1>

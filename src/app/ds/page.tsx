@@ -11,11 +11,22 @@ import { useState } from "react";
 const Page = () => {
   const [products, setProducts] = useState<Products>(productsDS);
 
+  const handleShowProductsClick = () => {
+    const element = document.getElementById("products");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleCheckAvailability = () => {
+    setProducts(productsDS);
+  };
+
   return (
     <>
       <SmallHeader
         title="Dedikované servery"
-        description="Posouvejte hranice vašich projektů s našimi dedikovanými servery."
+        description="Posouvej hranice svých projektů s našimi dedikovanými servery."
       />
       <section id="standard">
         <div className="container grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -49,7 +60,9 @@ const Page = () => {
                 plynulý zážitek
               </li>
             </ul>
-            <PrimaryButton className="mt-8">Zobrazit nabídku</PrimaryButton>
+            <PrimaryButton className="mt-8" onClick={handleShowProductsClick}>
+              Zobrazit nabídku
+            </PrimaryButton>
           </div>
           <div className="col-span-1 flex items-center justify-center">
             <Image
@@ -101,7 +114,9 @@ const Page = () => {
                 zážitek z hraní
               </li>
             </ul>
-            <PrimaryButton className="mt-8">Zobrazit nabídku</PrimaryButton>
+            <PrimaryButton className="mt-8" onClick={handleShowProductsClick}>
+              Zobrazit nabídku
+            </PrimaryButton>
           </div>
         </div>
       </section>
@@ -159,10 +174,29 @@ const Page = () => {
       </section>
       <section id="products">
         <div className="container">
-          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
-            <h1 className="text-3xl font-bold">Dostupné dedikované servery</h1>
+          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between gap-4">
+            <h1 className="text-3xl font-bold">
+              Dostupné dedikované servery{" "}
+              <span className="ml-6 rounded-md bg-primary-700 px-4 py-2 text-base text-white">
+                {products.length}
+              </span>
+            </h1>
+            <PrimaryButton
+              onClick={handleCheckAvailability}
+              className="bg-white px-4 py-2 !text-primary-700 hover:!bg-primary-50"
+            >
+              Zkontrolovat dostupnost
+            </PrimaryButton>
           </div>
-          <ProductGrid products={products} />
+          {products.length > 0 ? (
+            <ProductGrid products={products} />
+          ) : (
+            <div className="flex items-center justify-center py-10">
+              <h1 className="text-xl">
+                Omlouváme se, ale žádné servery nejsou aktuálně k dispozici.
+              </h1>
+            </div>
+          )}
         </div>
       </section>
     </>

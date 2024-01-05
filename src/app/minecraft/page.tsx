@@ -20,6 +20,13 @@ const Page = () => {
     }
   }, [active]);
 
+  const handleShowProductsClick = () => {
+    const element = document.getElementById("products");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <SmallHeader
@@ -59,7 +66,9 @@ const Page = () => {
                 plynulý zážitek
               </li>
             </ul>
-            <PrimaryButton className="mt-8">Zobrazit nabídku</PrimaryButton>
+            <PrimaryButton className="mt-8" onClick={handleShowProductsClick}>
+              Zobrazit nabídku
+            </PrimaryButton>
           </div>
           <div className="col-span-1 flex items-center justify-center">
             <Image
@@ -112,7 +121,9 @@ const Page = () => {
                 zážitek z hraní
               </li>
             </ul>
-            <PrimaryButton className="mt-8">Zobrazit nabídku</PrimaryButton>
+            <PrimaryButton className="mt-8" onClick={handleShowProductsClick}>
+              Zobrazit nabídku
+            </PrimaryButton>
           </div>
         </div>
       </section>
@@ -170,7 +181,7 @@ const Page = () => {
       </section>
       <section id="products">
         <div className="container">
-          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between">
+          <div className="section__title mb-4 flex flex-row flex-wrap items-center justify-between gap-4">
             <h1 className="text-3xl font-bold">
               Nabídka naších Minecraft serverů
             </h1>

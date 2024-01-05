@@ -71,4 +71,36 @@ export const productsDS: Products = [
     image: "../icons/VPS.svg",
     featured: false,
   },
+  {
+    title: "PRG-A-0V8G",
+    price: 2300,
+    features: [
+      {
+        title: "RAM",
+        value: "64GB",
+      },
+      {
+        icon: IconGlobe,
+        title: "Lokace",
+        value: "Praha SH.cz",
+      },
+      {
+        icon: IconCloudComputing,
+        title: "CPU",
+        value: "AMD Ryzen 5 3600",
+      },
+      {
+        icon: IconCloud,
+        title: "SSD",
+        value: "2x 512GB NVMe",
+      },
+      {
+        icon: IconCloudDataConnection,
+        title: "Konektivita",
+        value: "1x 1gbps port",
+      },
+    ],
+    image: "../icons/VPS.svg",
+    featured: false,
+  },
 ];
