@@ -7,6 +7,7 @@ import { productsDS } from "@/Data/DS";
 import { IconCheck, IconCpu } from "@tabler/icons-react";
 import Image from "next/image";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Page = () => {
   const [products, setProducts] = useState<Products>(productsDS);
@@ -19,7 +20,24 @@ const Page = () => {
   };
 
   const handleCheckAvailability = () => {
-    setProducts(productsDS);
+    toast.promise(
+      new Promise((resolve) => {
+        setProducts(productsDS);
+
+        if (productsDS.length > 0) {
+          setTimeout(() => {
+            resolve(`Počet dostupných serverů: ${productsDS.length}`);
+          }, 1000);
+        } else {
+          throw new Error();
+        }
+      }),
+      {
+        loading: "Kontroluji dostupnost",
+        success: `Počet dostupných serverů: ${productsDS.length}`,
+        error: "Omlouváme se, ale žádné servery nejsou aktuálně k dispozici.",
+      },
+    );
   };
 
   return (
